@@ -46,6 +46,9 @@ instance ( ShowHelper (Book' xs)
 instance Eq (Map.Map xs) => Eq (Book' xs) where
   Book x == Book y = x == y
 
+instance Ord (Map.Map xs) => Ord (Book' xs) where
+  compare (Book x) (Book y) = compare x y
+
 instance Monoid (Book' '[]) where
   mempty = emptyBook
   _ `mappend` _ = emptyBook

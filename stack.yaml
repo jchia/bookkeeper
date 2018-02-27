@@ -2,4 +2,6 @@ resolver: lts-10.2
 packages:
 - '.'
 extra-deps:
+- git: https://github.com/jchia/type-level-sets
+  commit: 9e6a0c7b65191e1fbce41beb3ac8b5f4a8fe2db5
 flags: {}
