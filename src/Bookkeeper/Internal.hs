@@ -43,11 +43,8 @@ instance ( ShowHelper (Book' xs)
          ) => ShowHelper (Book' ((k :=> v) ': xs)) where
   showHelper (Book (Map.Ext k v rest)) = (show k, show v):showHelper (Book rest)
 
-instance Eq (Book' '[]) where
-  _ == _ = True
-
-instance (Eq val, Eq (Book' xs)) => Eq (Book' ((field :=> val) ': xs)  ) where
-  Book (Map.Ext _ a as) == Book (Map.Ext _ b bs) = a == b && Book as == Book bs
+instance Eq (Map.Map xs) => Eq (Book' xs) where
+  Book x == Book y = x == y
 
 instance Monoid (Book' '[]) where
   mempty = emptyBook
