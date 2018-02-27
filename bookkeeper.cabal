@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 919c9bd63ad7efe1c1c555270f3970af8bead66e26cb198aca395daf0d1abc13
+-- hash: 93c158866299fe101b63164ec2fdab614c8e83c4f199d4c045205a7edc9b64ea
 
 name:           bookkeeper
 version:        0.2.5
@@ -66,10 +66,10 @@ test-suite doctest
   default-extensions: AutoDeriveTypeable ConstraintKinds DataKinds DefaultSignatures DeriveFunctor DeriveGeneric DeriveFoldable DeriveTraversable FlexibleContexts FlexibleInstances FunctionalDependencies GADTs MultiParamTypeClasses KindSignatures TypeInType OverloadedStrings RankNTypes ScopedTypeVariables TypeApplications TypeFamilies TypeOperators OverloadedLabels MagicHash
   ghc-options: -Wall
   build-depends:
-      Glob >=0.7 && <0.9
+      Glob >=0.7 && <0.10
     , base >=4.9 && <4.11
     , data-default-class
-    , doctest >=0.9 && <0.12
+    , doctest >=0.9 && <0.14
     , type-level-sets
     , yaml ==0.8.*
   other-modules:
